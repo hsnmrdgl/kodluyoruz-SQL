@@ -2,6 +2,13 @@
 
 Kodluyoruz SQL Patikası
 
+- [Ödev 1](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-1 "Ödev 1")
+- [Ödev 2](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-2 "Ödev 2")
+- [Ödev 3](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-3 "Ödev 3")
+- [Ödev 4](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-4 "Ödev 4")
+- [Ödev 5](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-5 "Ödev 5")
+- [Ödev 6](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-6 "Ödev 6")
+
 ## :arrow_forward: Ödev 1
 
 1.  **film** tablosunda bulunan **title** ve **description** sütunlarındaki verileri sıralayınız.
