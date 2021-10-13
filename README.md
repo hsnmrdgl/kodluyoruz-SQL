@@ -12,6 +12,7 @@ Kodluyoruz SQL Patikası
 - [Ödev 8](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-8 "Ödev 8")
 - [Ödev 9](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-9 "Ödev 9")
 - [Ödev 10](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-10 "Ödev 10")
+- [Ödev 11](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-11 "Ödev 11")
 
 ## :arrow_forward: Ödev 1
 
@@ -500,4 +501,53 @@ SELECT rental_id, first_name, last_name FROM customer
 
 ------------
 
+
+## :arrow_forward: Ödev 11
+
+1.  **actor** ve **customer** tablolarında bulunan **first_name** sütunları için tüm verileri sıralayalım.
+2.  **actor** ve **customer** tablolarında bulunan **first_name** sütunları için kesişen verileri sıralayalım.
+3.  **actor** ve **customer** tablolarında bulunan **first_name** sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+4.  İlk 3 sorguyu tekrar eden veriler için de yapalım.
+
+
+### :white_check_mark: Cevap :
+<details>
+  <summary>Kodu Gör!</summary>
+  
+ ```sql
+/* SORU 1 */
+(SELECT first_name FROM actor)
+	UNION (SELECT first_name FROM customer)
+	ORDER BY first_name;
+
+
+/* SORU 2 */
+(SELECT first_name FROM actor)
+	INTERSECT(SELECT first_name FROM customer)
+	ORDER BY first_name;
+
+
+/* SORU 3 */
+(SELECT first_name FROM actor)
+	EXCEPT(SELECT first_name FROM customer)
+	ORDER BY first_name;
+
+
+/* SORU 4 */
+(SELECT first_name FROM actor)
+	UNION ALL (SELECT first_name FROM customer)
+	ORDER BY first_name;
+
+(SELECT first_name FROM actor)
+	INTERSECT ALL(SELECT first_name FROM customer)
+	ORDER BY first_name;
+
+(SELECT first_name FROM actor)
+	EXCEPT ALL (SELECT first_name FROM customer)
+	ORDER BY first_name;
+
+```
+</details>
+
+------------
 
