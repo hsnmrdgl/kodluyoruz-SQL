@@ -13,6 +13,7 @@ Kodluyoruz SQL Patikası
 - [Ödev 9](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-9 "Ödev 9")
 - [Ödev 10](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-10 "Ödev 10")
 - [Ödev 11](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-11 "Ödev 11")
+- [Ödev 12](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-12 "Ödev 12")
 
 ## :arrow_forward: Ödev 1
 
@@ -551,3 +552,43 @@ SELECT rental_id, first_name, last_name FROM customer
 
 ------------
 
+
+## :arrow_forward: Ödev 12
+
+1.  **film** tablosunda film uzunluğu **length** sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
+2.  **film** tablosunda en yüksek rental_rate değerine sahip kaç tane film vardır?
+3.  **film** tablosunda en düşük rental_rate ve en düşün replacement_cost değerlerine sahip filmleri sıralayınız.
+4.  **payment** tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
+
+
+### :white_check_mark: Cevap :
+<details>
+  <summary>Kodu Gör!</summary>
+  
+ ```sql
+/* SORU 1 */
+SELECT length FROM film
+	WHERE length >(SELECT AVG(length) FROM film);
+
+
+/* SORU 2 */
+SELECT COUNT(rental_rate) FROM film
+	WHERE rental_rate = (SELECT MAX(rental_rate) FROM film);
+
+
+/* SORU 3 */
+SELECT title, rental_rate,
+	(SELECT MIN(replacement_cost) FROM film) FROM film
+	WHERE  rental_rate = ANY (SELECT MIN(rental_rate) FROM 		film);
+
+
+/* SORU 4 */
+SELECT customer.customer_id, first_name, last_name,
+	COUNT(*) AS number_of_purchases FROM customer
+	LEFT JOIN payment ON customer.customer_id = 	payment.customer_id
+	GROUP BY customer.customer_id, first_name, last_name
+	ORDER BY number_of_purchases DESC;
+```
+</details>
+
+------------
