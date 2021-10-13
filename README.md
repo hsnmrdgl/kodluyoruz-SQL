@@ -10,6 +10,8 @@ Kodluyoruz SQL Patikası
 - [Ödev 6](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-6 "Ödev 6")
 - [Ödev 7](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-7 "Ödev 7")
 - [Ödev 8](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-8 "Ödev 8")
+- [Ödev 9](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-9 "Ödev 9")
+- [Ödev 10](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-10 "Ödev 10")
 
 ## :arrow_forward: Ödev 1
 
@@ -430,6 +432,7 @@ DELETE FROM employee
 
 
 ## :arrow_forward: Ödev 9
+
 1.  **city** tablosu ile **country** tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
 2.  **customer** tablosu ile **payment** tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
 3.  **customer** tablosu ile **rental** tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
@@ -461,3 +464,40 @@ SELECT rental_id, first_name, last_name FROM customer
 </details>
 
 ------------
+
+
+## :arrow_forward: Ödev 10
+
+1.  **city** tablosu ile **country** tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
+2. **customer** tablosu ile **payment** tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+3.  **customer** tablosu ile **rental** tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+
+
+### :white_check_mark: Cevap :
+<details>
+  <summary>Kodu Gör!</summary>
+  
+ ```sql
+/* SORU 1 */
+SELECT city, country FROM city
+	LEFT JOIN country
+	ON city.city_id = country.country_id;
+
+
+/* SORU 2 */
+SELECT payment_id, first_name, last_name FROM customer 
+	RIGHT JOIN payment
+	ON payment.customer_id = customer.customer_id;
+
+
+/* SORU 3 */
+SELECT rental_id, first_name, last_name FROM customer 
+	FULL JOIN rental
+	ON rental.customer_id = customer.customer_id;
+
+```
+</details>
+
+------------
+
+
