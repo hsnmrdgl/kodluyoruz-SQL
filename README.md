@@ -8,6 +8,8 @@ Kodluyoruz SQL Patikası
 - [Ödev 4](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-4 "Ödev 4")
 - [Ödev 5](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-5 "Ödev 5")
 - [Ödev 6](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-6 "Ödev 6")
+- [Ödev 7](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-7 "Ödev 7")
+- [Ödev 8](https://github.com/hsnmrdgl/kodluyoruz_SQL#arrow_forward-%C3%B6dev-8 "Ödev 8")
 
 ## :arrow_forward: Ödev 1
 
@@ -294,8 +296,8 @@ SELECT country_id, COUNT(*) FROM city
 
 ## :arrow_forward: Ödev 8
 
-1.  test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
-2.  Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+1.  **test** veritabanınızda **employee** isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+2.  Oluşturduğumuz **employee** tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
 3.  Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
 4.  Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 
